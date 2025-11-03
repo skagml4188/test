@@ -3,25 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | 내 브랜드</title>
-  <link rel="stylesheet" href="../style.css">
+  <title>홈 | 내 브랜드</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- 🌸 배경 장식 -->
+  <div class="bg-decor" aria-hidden="true">
+    <svg style="top: 20%; left: 10%; width: 80px;" viewBox="0 0 100 100">
+      <path d="M50 0C60 20 80 20 100 40C80 50 80 70 50 90C20 70 20 50 0 40C20 20 40 20 50 0Z" fill="#fff0f8"/>
+    </svg>
+    <svg style="top: 60%; right: 10%; width: 100px;" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="40" fill="#f0ffff"/>
+    </svg>
+    <div class="star" style="top:10%; left:40%; animation-delay:0.5s;"></div>
+    <div class="star" style="top:70%; left:20%; animation-delay:1.2s;"></div>
+    <div class="star" style="top:50%; left:80%; animation-delay:2s;"></div>
+  </div>
+
   <header>
-    <a href="../">Home</a>
-    <a href="../about/">About</a>
-    <a href="./">Contact</a>
+    <a href="./">Home</a>
+    <a href="./about/">About</a>
+    <a href="./contact/">Contact</a>
   </header>
 
   <main>
-    <h1>강사 소개 💌</h1>
-    <p>
-      따뜻하게 가르치는 걸 좋아하는 사람이에요.<br>
-      함께 배우고 성장하는 과정을 소중히 생각해요 🌷<br><br>
-      💬 <a href="mailto:hello@example.com" style="color: var(--accent); font-weight:700;">hello@example.com</a>
-    </p>
+    <h1>안녕! 💖</h1>
+    <p>이곳은 나의 작은 공간이야.<br>귀엽고 따뜻한 프로젝트들을 소개할게.</p>
+    <button onclick="sayHi()">👋 인사하기</button>
   </main>
 
   <footer>© 2025 My Cute Brand 🌸</footer>
+
+  <script>
+    function sayHi() {
+      alert("안녕! 오늘도 반가워 💕");
+    }
+  </script>
 </body>
 </html>
