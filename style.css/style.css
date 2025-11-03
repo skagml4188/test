@@ -18,8 +18,46 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
+  position: relative;
 }
 
+/* 🌈 움직이는 배경 요소 */
+.bg-decor {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.bg-decor svg {
+  position: absolute;
+  opacity: 0.7;
+  animation: float 12s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+/* 별 반짝이 효과 */
+.star {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* 기본 UI */
 header {
   width: 100%;
   padding: 16px 0;
@@ -31,6 +69,7 @@ header {
   justify-content: center;
   gap: 32px;
   border-bottom: 2px solid var(--accent);
+  z-index: 10;
 }
 
 header a {
@@ -48,7 +87,9 @@ header a:hover {
 main {
   flex: 1;
   text-align: center;
-  padding: 40px 20px;
+  padding: 60px 20px;
+  position: relative;
+  z-index: 5;
 }
 
 h1 {
@@ -88,4 +129,5 @@ footer {
   border-top: 2px solid var(--accent);
   width: 100%;
   text-align: center;
+  z-index: 10;
 }
