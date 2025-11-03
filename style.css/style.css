@@ -1,0 +1,91 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+:root {
+  --pink: #ffd6e8;
+  --mint: #d4f6ed;
+  --sky: #d8ebff;
+  --text: #444;
+  --accent: #ff99cc;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(180deg, var(--pink), var(--mint));
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  padding: 16px 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  border-bottom: 2px solid var(--accent);
+}
+
+header a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+header a:hover {
+  transform: scale(1.1);
+  color: #ff66aa;
+}
+
+main {
+  flex: 1;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+button {
+  background-color: var(--accent);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ff66aa;
+  transform: translateY(-2px);
+}
+
+footer {
+  padding: 16px;
+  font-size: 0.9rem;
+  color: #666;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-top: 2px solid var(--accent);
+  width: 100%;
+  text-align: center;
+}
